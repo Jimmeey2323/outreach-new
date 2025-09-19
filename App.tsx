@@ -61,6 +61,147 @@ const App: React.FC = () => {
           </p>
         </header>
 
+        {/* Issues with Current SOP */}
+        <section className="mb-16">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-4 text-slate-800 dark:text-gray-100">
+              🔎 Issues in the Current SOP
+            </h2>
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto">
+              Understanding why the existing process needs transformation to build a more effective, relationship-focused approach.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Too Transactional, Not Relational */}
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-red-600 dark:text-red-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <h3 className="text-lg font-bold text-red-800 dark:text-red-300">Too Transactional</h3>
+                </div>
+                <p className="text-red-700 dark:text-red-300 text-sm mb-3">
+                  The process focuses heavily on sending schedules, fee structures, and waiver links immediately.
+                </p>
+                <p className="text-red-600 dark:text-red-400 text-sm">
+                  This comes across as sales-first instead of client-first. Little focus on understanding real needs, goals, or lifestyle before pushing pricing.
+                </p>
+              </div>
+
+              {/* Rigid Timing */}
+              <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-orange-600 dark:text-orange-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <h3 className="text-lg font-bold text-orange-800 dark:text-orange-300">Rigid Timing</h3>
+                </div>
+                <p className="text-orange-700 dark:text-orange-300 text-sm mb-3">
+                  The "2 hours, 48 hours, 7 days, 14 days" sequence is rigid and doesn't adapt to different lead types.
+                </p>
+                <p className="text-orange-600 dark:text-orange-400 text-sm">
+                  No segmentation means hot vs. cold, corporate vs. individual, referral vs. ad-generated leads are all treated the same.
+                </p>
+              </div>
+
+              {/* WhatsApp Over-Reliance */}
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                  </svg>
+                  <h3 className="text-lg font-bold text-yellow-800 dark:text-yellow-300">Channel Over-Reliance</h3>
+                </div>
+                <p className="text-yellow-700 dark:text-yellow-300 text-sm mb-3">
+                  Assuming WhatsApp is the primary method overlooks preferences. Some leads may prefer email or calls.
+                </p>
+                <p className="text-yellow-600 dark:text-yellow-400 text-sm">
+                  No personalization in channel selection leads to risk of low response rates.
+                </p>
+              </div>
+
+              {/* Information Overload */}
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <h3 className="text-lg font-bold text-blue-800 dark:text-blue-300">Information Overload</h3>
+                </div>
+                <p className="text-blue-700 dark:text-blue-300 text-sm mb-3">
+                  Immediately sharing fee structures and schedules in the first touchpoint often scares away prospects.
+                </p>
+                <p className="text-blue-600 dark:text-blue-400 text-sm">
+                  Pricing should come after establishing value and understanding client motivations.
+                </p>
+              </div>
+
+              {/* Weak Value Communication */}
+              <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-purple-600 dark:text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                  </svg>
+                  <h3 className="text-lg font-bold text-purple-800 dark:text-purple-300">Weak Value Communication</h3>
+                </div>
+                <p className="text-purple-700 dark:text-purple-300 text-sm mb-3">
+                  The SOP doesn't guide staff on communicating Physique 57's unique value (method, community, results).
+                </p>
+                <p className="text-purple-600 dark:text-purple-400 text-sm">
+                  Assumes logistics and pricing are enough to convert, which is rarely true in fitness sales.
+                </p>
+              </div>
+
+              {/* Lack of Personalization */}
+              <div className="bg-pink-50 dark:bg-pink-900/20 border border-pink-200 dark:border-pink-800 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-pink-600 dark:text-pink-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                  <h3 className="text-lg font-bold text-pink-800 dark:text-pink-300">Lack of Personalization</h3>
+                </div>
+                <p className="text-pink-700 dark:text-pink-300 text-sm mb-3">
+                  Conversations framed around "signing up for trial" instead of discovering the client's why.
+                </p>
+                <p className="text-pink-600 dark:text-pink-400 text-sm">
+                  No mention of using client data (age, fitness level, referral source) to tailor the pitch.
+                </p>
+              </div>
+            </div>
+
+            {/* Additional Issues */}
+            <div className="mt-8 grid md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-4">Short-Sighted Journey</h3>
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                  <li>• Only 4 touchpoints in 14 days - fitness sales often require 8-12+ touches</li>
+                  <li>• Many people decide after weeks of nurturing, not within 2 weeks</li>
+                  <li>• No automation or CRM tracking for consistency</li>
+                  <li>• Missing social proof and emotional hooks</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-4">Lost Opportunities</h3>
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                  <li>• No retargeting after 14 days - leaves money on the table</li>
+                  <li>• No feedback loop to understand why leads drop off</li>
+                  <li>• End of journey = dead end, no long-term nurturing</li>
+                  <li>• Many "not now" prospects could convert later if kept warm</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900/30 dark:to-purple-900/30 border border-pink-200 dark:border-pink-800 rounded-xl p-6 text-center">
+              <h3 className="text-xl font-bold text-pink-800 dark:text-pink-300 mb-2">The Solution Below</h3>
+              <p className="text-pink-700 dark:text-pink-400">
+                Our new tiered approach addresses these issues with segmented journeys, relationship-first communication, 
+                and long-term nurturing strategies that convert more leads and build stronger client relationships.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Lead Segmentation Info */}
         <section className="mb-12">
             <h2 className="text-2xl font-bold text-center mb-8 text-slate-800 dark:text-gray-100">Lead Segmentation Strategy</h2>
