@@ -241,6 +241,27 @@ const App: React.FC = () => {
         <div>
             {activeTab === 'tier1' && (
                  <div className="relative">
+                    {/* Tier 1 Journey Map Overview */}
+                    <div className="mb-12 bg-white/80 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-lg">
+                        <h3 className="text-2xl font-bold text-pink-600 dark:text-pink-400 mb-4 text-center">
+                            Tier 1: High-Intent Lead Journey Overview
+                        </h3>
+                        <p className="text-slate-700 dark:text-gray-300 text-center mb-6">
+                            A comprehensive visual map of the high-touch journey for warm prospects
+                        </p>
+                        <div className="flex justify-center">
+                            <img 
+                                src="/images/tier1-journey-map.png" 
+                                alt="Physique 57 India: Tier 1 Lead Journey Map showing the complete customer journey from lead ingestion through post-purchase engagement"
+                                className="max-w-full h-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-md"
+                                style={{ maxHeight: '500px', objectFit: 'contain' }}
+                            />
+                        </div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-4">
+                            High-intent leads receive immediate, personalized engagement with multiple touchpoints to maximize conversion
+                        </p>
+                    </div>
+                    
                     {JOURNEY_MAP.map((phase, index) => (
                         <JourneyPhase key={phase.id} phase={phase} isFirst={index === 0} />
                     ))}
@@ -248,6 +269,27 @@ const App: React.FC = () => {
             )}
             {activeTab === 'tier2' && (
                  <div className="relative">
+                    {/* Tier 2 Timeline Overview */}
+                    <div className="mb-12 bg-white/80 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-lg">
+                        <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4 text-center">
+                            Tier 2: Nurture-Intent Lead Timeline
+                        </h3>
+                        <p className="text-slate-700 dark:text-gray-300 text-center mb-6">
+                            An automated nurture sequence designed to educate and build trust over time
+                        </p>
+                        <div className="flex justify-center">
+                            <img 
+                                src="/images/tier2-timeline.png" 
+                                alt="Physique 57 India's Lead Management Timeline showing automated touchpoints from 5 minutes to quarterly re-engagement campaigns"
+                                className="max-w-full h-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-md"
+                                style={{ maxHeight: '400px', objectFit: 'contain' }}
+                            />
+                        </div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-4">
+                            Automated nurture sequence with strategic touchpoints to gradually build interest and filter for intent
+                        </p>
+                    </div>
+                    
                     {TIER2_JOURNEY_MAP.map((phase, index) => (
                         <JourneyPhase key={phase.id} phase={phase} isFirst={index === 0} />
                     ))}
